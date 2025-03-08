@@ -1,3 +1,7 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 try {
 	process.env.LESSONS = process.env.LESSONS ?? 1;
 
@@ -116,6 +120,8 @@ try {
 		).then((response) => response.json());
 
 		xp += response.xpGain;
+
+		await sleep(45000); // 45 sec break per |  xp = 30 / min  |  800 / hour | 80 lessons = one hour | 
 	}
 
 	console.log(`🎉 You won ${xp} XP`);
