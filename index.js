@@ -121,7 +121,7 @@ try {
 
 		xp += response.xpGain;
 
-		await sleep(45000); // 45 sec break per |  xp = 30 / min  |  800 / hour | 80 lessons = one hour | 
+		await sleep(15000); 
 	}
 
 	console.log(`🎉 You won ${xp} XP`);
